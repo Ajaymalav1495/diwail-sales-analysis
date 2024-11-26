@@ -5,7 +5,8 @@ def marital_status():
     import matplotlib.pyplot as plt 
     import seaborn as sns
     st.write("---")
-    st.header("Marital_Statuse")
+    st.header("Diwali Sales Analysis")
+    st.subheader("Marital_Statuse")
     st.code("df = pd.read_csv('Diwali Sales Data.csv', encoding= 'unicode_escape')")
     df = pd.read_csv('Diwali Sales Data.csv', encoding= 'unicode_escape')
     st.code("""ax = sns.countplot(data = df, x = 'Marital_Status')
