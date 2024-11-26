@@ -5,7 +5,7 @@ def product_category():
     import matplotlib.pyplot as plt 
     import seaborn as sns
     st.write("---")
-    st.header("Product_Category")
+    st.subheader("Product_Category")
     st.code("df = pd.read_csv('Diwali Sales Data.csv', encoding= 'unicode_escape')")
     df = pd.read_csv('Diwali Sales Data.csv', encoding= 'unicode_escape')
     st.code("""sns.set(rc={'figure.figsize':(20,5)})
