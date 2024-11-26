@@ -5,7 +5,9 @@ def occupation():
     import matplotlib.pyplot as plt 
     import seaborn as sns
     st.write("---")
-    st.header("Occupation")
+    st.header("Diwali Sales Analysis")
+    st.subheader("Occupation")
+    
     st.code("df = pd.read_csv('Diwali Sales Data.csv', encoding= 'unicode_escape')")
     df = pd.read_csv('Diwali Sales Data.csv', encoding= 'unicode_escape')
     st.code("""sns.set(rc={'figure.figsize':(20,5)})
