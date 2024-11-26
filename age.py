@@ -5,7 +5,8 @@ def Age():
     import matplotlib.pyplot as plt 
     import seaborn as sns
     st.write("---")
-    st.header("Age")
+    st.header("Diwali Sales Analysis")
+    st.subheader("Age")
     st.code("df = pd.read_csv('Diwali Sales Data.csv', encoding= 'unicode_escape')")
     df = pd.read_csv('Diwali Sales Data.csv', encoding= 'unicode_escape')
     st.code("""ax = sns.countplot(data = df, x = 'Age Group', hue = 'Gender')
