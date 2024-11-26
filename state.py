@@ -5,7 +5,8 @@ def States():
     import matplotlib.pyplot as plt 
     import seaborn as sns
     st.write("---")
-    st.header("State")
+    st.header("Diwali Sales Analysis")
+    st.subheader("State")
     st.code("df = pd.read_csv('Diwali Sales Data.csv', encoding= 'unicode_escape')")
     df = pd.read_csv('Diwali Sales Data.csv', encoding= 'unicode_escape')
     st.code("""# total number of orders from top 10 states
