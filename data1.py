@@ -1,7 +1,7 @@
 def data():
     import streamlit as st
     import pandas as pd
-
+    st.header("Diwali Sales Analysis")
     # Displaying the import code
     st.code("""# Import python libraries
 import numpy as np 
