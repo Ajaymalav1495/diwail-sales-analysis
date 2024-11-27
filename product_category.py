@@ -20,17 +20,21 @@ def product_category():
     st.pyplot(plt)
     
     st.write("---")
-
-    # Group by product category and sum the amount
     
+    # Group by product category and sum the amount
+    sales_state = df.groupby(['Product_Category'], as_index=False)['Amount'].sum().sort_values(by='Amount', ascending=False)
+
     # Plot the sales amount by product category
     sns.set(rc={'figure.figsize':(20,5)})
     sns.barplot(data = sales_state, x = 'Product_Category', y = 'Amount')
     st.pyplot(plt)
-
+    
+    # Display the grouped data in a dataframe
+    st.dataframe(sales_state)
+    
     # Conclusion
     highest_sales_category = sales_state.iloc[0]['Product_Category']
     highest_sales_amount = sales_state.iloc[0]['Amount']
     st.write(f"The product category with the highest sales during Diwali is **{highest_sales_category}** with a total sales amount of **₹{highest_sales_amount}**.")
-    st.write(sales_state = df.groupby(['Product_Category'], as_index=False)['Amount'].sum().sort_values(by='Amount', ascending=False))
+
 product_category()
