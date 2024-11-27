@@ -11,7 +11,12 @@ def product_category():
     
     # Load the dataset
     df = pd.read_csv('Diwali Sales Data.csv', encoding= 'unicode_escape')
-    
+
+    st.code("""sns.set(rc={'figure.figsize':(20,5)})
+    ax = sns.countplot(data = df, x = 'Product_Category')
+    for bars in ax.containers:
+        ax.bar_label(bars)
+    st.pyplot(plt)""")
     # Plot the count of each product category
     sns.set(rc={'figure.figsize':(20,5)})
     ax = sns.countplot(data = df, x = 'Product_Category')
@@ -23,7 +28,9 @@ def product_category():
     
     # Group by product category and sum the amount
     sales_state = df.groupby(['Product_Category'], as_index=False)['Amount'].sum().sort_values(by='Amount', ascending=False)
-
+    st.code(""" sns.set(rc={'figure.figsize':(20,5)})
+    sns.barplot(data = sales_state, x = 'Product_Category', y = 'Amount')
+    st.pyplot(plt)""")
     # Plot the sales amount by product category
     sns.set(rc={'figure.figsize':(20,5)})
     sns.barplot(data = sales_state, x = 'Product_Category', y = 'Amount')
