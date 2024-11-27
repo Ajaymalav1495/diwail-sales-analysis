@@ -40,4 +40,3 @@ elif selected == "States":
     States()
 elif selected == "Age":
     Age()
-st.header("Diwali Sales Analysis")
