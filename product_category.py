@@ -18,6 +18,7 @@ def product_category():
     for bars in ax.containers:
         ax.bar_label(bars)
     st.pyplot(plt)
+    sales_state = df.groupby(['Product_Category'], as_index=False)['Amount'].count().sort_values(by='Count', ascending=False)
     
     st.write("---")
     
