@@ -22,6 +22,7 @@ def Gender():
     
     # Display first plot
     st.pyplot(plt)
+    
     st.write("---")
     
     # Bar chart for Gender vs Total Amount
@@ -38,6 +39,7 @@ def Gender():
     
     # Display second plot
     st.pyplot(plt)
+    st.dataframe(sales_gen)
     
     # Conclusion based on the analysis
     st.write("### Conclusion")
