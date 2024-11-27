@@ -54,11 +54,6 @@ import seaborn as sns""")
     st.code("df.columns")
     st.write(df.columns)
 
-    # Renaming column
-    st.code("""# Rename column
-df.rename(columns={'Marital_Status': 'Shaadi'}, inplace=True)""")
-    df.rename(columns={'Marital_Status': 'Shaadi'}, inplace=True)
-    st.write(df.columns)
 
     # Displaying the description of the DataFrame
     st.code("""# describe() method returns description of the data in the DataFrame (i.e. count, mean, std, etc)
